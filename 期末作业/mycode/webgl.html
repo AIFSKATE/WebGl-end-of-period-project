@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Point lighted cube (with animation)</title>
+    <link rel="stylesheet" href="../mycode/display.css">
+  </head>
+
+  <body onload="main()">
+    <div class="display">    
+      <canvas id="webgl" width="1200" height="700">
+      Please use a browser that supports "canvas"
+      </canvas>
+      <div>操作提示：<br>
+        请确保浏览器可以加载本地图片<br>
+        如果物体没出来可能是电脑问题，可以尝试点击左侧并移动鼠标,还不行就请速速联系我<br><br>
+        鼠标点击并移动:控制物体模型矩阵<br>
+        E:减少雾化程度<br>
+        Q:加深雾化程度<br>
+        W:开启透视（会受雾化程度影响视觉效果）<br>
+        A:减少透明度（alpha=1时会设置为不透明）<br>
+        D:增加透明度<br>
+        空格:切换透视投影与正交投影<br>
+        Z:在透视投影下增加fov<br>
+        C:在透视投影下减少fov<br>
+        ↑(向上箭头):控制视图矩阵，切换视点<br>
+        ↓(向下箭头):控制视图矩阵，切换视点<br>
+        ←(向左箭头):控制视图矩阵，切换视点<br>
+        →(向右箭头):控制视图矩阵，切换视点<br><br>
+        可通过以下输入栏输入雾化颜色与清空颜色缓冲时的颜色值<br>
+        <div>颜色R：<input type="number" min="0" max="255" placeholder="0-255" class="colorChange"></div>
+        <div>颜色G：<input type="number" min="0" max="255" placeholder="0-255" class="colorChange"></div>
+        <div>颜色B：<input type="number" min="0" max="255" placeholder="0-255" class="colorChange"></div>
+        <button id="button">修改颜色</button>
+      </div>
+    </div>
+
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="webgl.js"></script>
+  </body>
+</html>
